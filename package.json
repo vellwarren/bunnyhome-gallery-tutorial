@@ -1,0 +1,22 @@
+{
+  "name": "elliott-gallery-tutorial",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "examples/server",
+    "examples/web"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace @gallery-example/server run dev",
+    "dev:web": "npm --workspace @gallery-example/web run dev",
+    "test": "npm --workspace @gallery-example/server test",
+    "build": "npm --workspace @gallery-example/web run build",
+    "check": "npm test && npm run build",
+    "cleanup:dry-run": "npm --workspace @gallery-example/server run cleanup:dry-run"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+

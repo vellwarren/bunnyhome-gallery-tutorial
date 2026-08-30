@@ -1,0 +1,22 @@
+{
+  "name": "@gallery-example/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node --env-file=.env src/server.js",
+    "test": "node --test",
+    "cleanup:dry-run": "node --env-file=.env scripts/cleanup-orphans.js",
+    "cleanup": "node --env-file=.env scripts/cleanup-orphans.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+

@@ -1,0 +1,52 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #302c2d; background: #f4f0eb; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+.app-shell { min-height: 100vh; padding: 28px; }
+.topbar, .layout { width: min(1180px, 100%); margin: 0 auto; }
+.topbar { display: flex; justify-content: space-between; align-items: start; margin-bottom: 22px; }
+h1, h2, h3 { margin: 0; font-family: Georgia, serif; font-style: italic; font-weight: 500; }
+h1 { font-size: clamp(25px, 4vw, 38px); }
+.eyebrow { margin: 0 0 6px; color: #967b75; font-size: 10px; letter-spacing: .18em; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr); gap: 22px; }
+.chat-panel, .gallery-panel, .login-card { border: 1px solid rgba(112, 91, 86, .16); border-radius: 22px; background: rgba(255,255,255,.66); box-shadow: 0 14px 40px rgba(74,59,54,.08); }
+.chat-panel { display: flex; min-height: 680px; flex-direction: column; padding: 18px; }
+.messages { flex: 1; max-height: 480px; overflow: auto; padding: 6px; }
+.message { width: fit-content; max-width: 82%; margin: 10px 0; padding: 11px 13px; border-radius: 15px; background: #ece5df; }
+.message.user { margin-left: auto; background: #daccc4; }
+.message p { margin: 0; line-height: 1.55; }
+.message small { display: block; margin-top: 7px; color: #806e69; }
+.message img { width: min(260px, 100%); max-height: 220px; margin-bottom: 8px; border-radius: 10px; object-fit: contain; }
+textarea { width: 100%; min-height: 84px; resize: vertical; padding: 12px; border: 1px solid #d9cbc4; border-radius: 13px; background: #fffdfb; }
+.composer-actions, .viewer-actions, .login-actions { display: flex; gap: 9px; align-items: center; margin-top: 10px; }
+button, .file-button { padding: 9px 13px; border: 1px solid #b99e95; border-radius: 999px; background: #80645e; color: white; }
+.quiet { background: transparent; color: #745d58; }
+.file-button input { display: none; }
+.save-toggle { margin-right: auto; color: #6f615e; font-size: 13px; }
+.pending { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 10px; margin: 10px 0; padding: 8px; border-radius: 12px; background: #eee7e2; }
+.pending img { width: 54px; height: 54px; object-fit: cover; border-radius: 8px; }
+.pending button { border: 0; background: transparent; color: #765f5b; }
+.notice { color: #9b554f; font-size: 13px; }
+.gallery-panel { position: relative; padding: 20px; }
+.gallery-panel > header { display: flex; align-items: start; justify-content: space-between; margin-bottom: 18px; }
+.gallery-grid { columns: 2; column-gap: 13px; }
+.tile { width: 100%; margin: 0 0 13px; padding: 0; overflow: hidden; break-inside: avoid; border: 0; border-radius: 14px; background: #eee7e2; color: #564844; text-align: left; }
+.tile img { width: 100%; max-height: 280px; display: block; object-fit: cover; }
+.tile span { display: block; padding: 8px 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.viewer { position: absolute; inset: 10px; z-index: 2; overflow: auto; padding: 18px; border-radius: 18px; background: #faf7f3; box-shadow: 0 16px 45px rgba(44,34,32,.2); }
+.viewer > img { width: 100%; max-height: 330px; object-fit: contain; border-radius: 13px; background: #eee7e2; }
+.viewer-close { float: right; margin-bottom: 10px; }
+.viewer h3 { clear: both; margin: 14px 0; font-size: 22px; }
+.viewer article { padding: 12px; border-radius: 12px; background: #eee8e3; }
+.viewer article + article { margin-top: 9px; }
+.viewer article p { margin: 6px 0 0; line-height: 1.7; }
+.viewer .impression { background: #e5d8d1; font-style: italic; }
+.empty { color: #8a7974; text-align: center; }
+.login-shell { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+.login-card { width: min(430px, 100%); padding: 30px; }
+.login-card > p:not(.eyebrow) { color: #796a66; line-height: 1.6; }
+.login-card label { display: grid; gap: 5px; margin-top: 12px; color: #6e5f5b; font-size: 13px; }
+.login-card input { padding: 10px; border: 1px solid #d1c1ba; border-radius: 10px; background: #fffdfb; }
+@media (max-width: 780px) { .app-shell { padding: 16px; } .layout { grid-template-columns: 1fr; } .chat-panel { min-height: 560px; } }
+
