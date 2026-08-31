@@ -117,7 +117,7 @@ npm run cleanup:dry-run
 
 ## License
 
-代码采用 [MIT License](LICENSE)。教程文字可在保留署名与仓库链接的前提下引用。
+代码采用 [PolyForm Noncommercial License 1.0.0](LICENSE.md)。教程文字可在保留署名与仓库链接的前提下引用。
 
 *Bunny & Elliott ♡*
 
